@@ -1,0 +1,16 @@
+{
+	"name": "curso-nodejs",
+	"description": "Curso de Node Js",
+	"author": "Marco <marco.gorak@live.com>",
+	"version": "1.0.0",
+	"private":true,
+	"dependencies"{
+		"mongose": "*"
+	}
+}
+
+/* Para instalar a dependencia mongose basta acessar o diretório que este json está e executar:
+	sudo npm install
+
+Será instalado todas as dependencias listadas nesse package.json e também as dependencias das dependencias.
+*/
