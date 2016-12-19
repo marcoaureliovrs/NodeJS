@@ -1,15 +1,18 @@
 var express = require('express');
 var load = require('express-load');
+var bodyParser = require('body-parser');
+var expressValidator = require('express-validator');
 
 module.exports = function() {
 	console.log("modulo esta sendo carregado");
 
 	var app = express();
-	
-
-	app.set('view engine','ejs'); //set é utilizando sempre que quisermos definir variáveis no express que passem por todo sistema
-	//ejs (Embeded JavaScript)
+	app.set('view engine','ejs');
 	app.set('views', './app/views');
+
+	app.use(bodyParser.urlencoded({extented: true}));
+	app.use(bodyParser.json());
+	app.use(expressValidator());
 
 	load('routes',{cwd:'app'})
 		.then('infra')
