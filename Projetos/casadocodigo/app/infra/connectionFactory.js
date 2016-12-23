@@ -9,11 +9,6 @@ var connection = function(){
 			password: '',
 			database: 'casadocodigo'
 	});*/
-	return mysql.createConnection({
-			host: '192.168.99.100',
-			user: 'root',
-			password: 'Maltx26792mavrs',
-			database: 'casadocodigo'
 });
 	
 }
